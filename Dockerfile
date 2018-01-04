@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ENV CLINGO_VER v5.2.2
+ENV CLINGO_VER master
 
 USER root
 
