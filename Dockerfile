@@ -1,6 +1,6 @@
 FROM centos/devtoolset-6-toolchain-centos7
 
-ENV CLINGO_VER v5.2.2
+ENV CLINGO_VER master
 
 USER root
 
