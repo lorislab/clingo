@@ -6,7 +6,7 @@ USER root
 
 RUN yum -y install epel-release 
 
-RUN yum -y install git cmake3 make \
+RUN yum -y install git cmake3 make bison re2c \
     yum -y clean all
 
 RUN ln -s /usr/bin/cmake3 /usr/bin/cmake
