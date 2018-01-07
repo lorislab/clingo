@@ -4,10 +4,9 @@ ENV CLINGO_VER master
 
 USER root
 
-RUN yum -y install epel-release \
-    yum -y clean all
+RUN yum -y install epel-release 
 
-RUN yum -y install git cmake3 \
+RUN yum -y install git cmake3 make \
     yum -y clean all
 
 RUN ln -s /usr/bin/cmake3 /usr/bin/cmake
@@ -20,8 +19,6 @@ RUN cd /opt/clingo \
     && git pull origin ${CLINGO_VER} \
     && git submodule update --init --recursive
 
-RUN yum -y install git make \
-    yum -y clean all
 
 WORKDIR /opt/clingo
 RUN cmake -H/opt/clingo -B/opt/clingo -DCMAKE_BUILD_TYPE=release \
